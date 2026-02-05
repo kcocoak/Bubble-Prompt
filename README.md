@@ -49,7 +49,7 @@ npm run dev
 
 ## 🤝 贡献者
 
-- **Feng** (Lead Developer & Product Idea)
+- **kcocoak** (Lead Developer & Product Idea)
 
 ## 📄 开源协议
 
