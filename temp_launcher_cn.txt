@@ -1,0 +1,46 @@
+@echo off
+setlocal
+
+echo ===================================================
+echo       Bubble Prompt 启动器
+echo ===================================================
+echo.
+
+:: 1. 检查 Node.js
+echo [步骤 1/3] 正在检查 Node.js 环境...
+node -v >nul 2>&1
+if %errorlevel% neq 0 (
+    echo [错误] 未检测到 Node.js！
+    echo 请访问 https://nodejs.org/ 下载并安装 Node.js。
+    echo 安装完成后请重启电脑。
+    echo.
+    echo 按任意键退出...
+    pause >nul
+    exit /b
+)
+echo    - Node.js 已安装。
+echo.
+
+:: 2. 检查依赖
+echo [步骤 2/3] 正在检查依赖库...
+if not exist "node_modules\" (
+    echo    - 检测到首次运行，正在安装依赖...
+    echo    - 这可能需要几分钟，请耐心等待。
+    call npm install
+    if %errorlevel% neq 0 (
+        echo [错误] 依赖安装失败。
+        pause
+        exit /b
+    )
+) else (
+    echo    - 依赖库已就绪。
+)
+echo.
+
+:: 3. 启动服务
+echo [步骤 3/3] 正在启动应用...
+echo    - 即将自动打开浏览器...
+echo.
+call npm run dev -- --open
+
+pause
