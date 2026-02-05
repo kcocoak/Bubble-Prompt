@@ -1,8 +1,16 @@
-#Bubble Prompt (泡泡提示器)可生成询问ai提示词
+# Bubble Prompt (泡泡提示器)
+## 参赛信息
+- 比赛名称：[2025开源安全奖励计划]
+- 参赛项目：Bubble Prompt - 现代化AI提示词生成工具
+- 开发者：kcocoak
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![React](https://img.shields.io/badge/React-19-61dafb.svg)
 ![Vite](https://img.shields.io/badge/Vite-6.0-646cff.svg)
+
+## 🚀 快速启动（推荐）
+1. 双击项目根目录下的 `一键启动.bat` 文件
+2. 自动打开浏览器访问 `http://localhost:5175` 即可使用
 
 **Bubble Prompt** 是一款专为中文用户打造的现代化提示词生成工具。它摒弃了枯燥的表单，采用灵动的“泡泡”设计语言，帮助你轻松构建高质量的 AI 提示词。
 
